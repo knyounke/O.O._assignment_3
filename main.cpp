@@ -9,14 +9,15 @@ using namespace std;
 int main()
 {
 
-	Puzzle("hello");
+	Puzzle answer("hello");
 	
 cout << "   _____*\n";
 cout << "  /\n";
 cout << ",+,\n";
 cout << "| |\n";
 cout << "|_|\n\n";
-cout << "_ _ _  _ _ _ _ _ _ :\n";
+
+	answer.to_string();
 
 
 return 0;
