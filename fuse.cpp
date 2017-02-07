@@ -9,21 +9,23 @@ Fuse::Fuse(int t)
 	t = time;
 };
 
-bool burn()
+bool Fuse::burn()
 {
 
 	if(t != 0)
 	{
+		t -= 1;
 		return true;
 	}
 	else
 	{
+
 		return false;
 	}
 
 }
 
-string to_string()
+string Fuse::to_string()
 {
 	string fuse;
 	string light = "*\n";

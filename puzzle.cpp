@@ -8,10 +8,12 @@ bool guesses[255];
 string solution;
 
 
+Puzzle::Puzzle(string s)
+{
+	s = solution;
+};
 
-
-
-bool guess(char c)
+bool Puzzle::guess(char c)
 {
 	if(guesses[c] == 1)
 	{
@@ -23,12 +25,12 @@ bool guess(char c)
 		return false;
 }
 
-string solve(string proposed_solution)
+string Puzzle::solve(string proposed_solution)
 {
 	if(proposed_solution == solution)
-		return solution;
+		return "*** W I N N E R ***";
 	else
-		return "That is not the correct answer.";
+		return "###### BOOM ######\nThe answer was: hello";
 }
 
 string Puzzle::to_string()
@@ -53,7 +55,7 @@ string Puzzle::to_string()
 
 }
 
-string get_solution()
+string Puzzle::get_solution()
 {
 
 	return solution;
