@@ -6,7 +6,7 @@ class Fuse
 {
 	
 	public:
-		Fuse(int);
+		Fuse(int time);
 		bool burn();
 		std::string to_string();
 

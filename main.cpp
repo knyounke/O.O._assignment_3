@@ -10,6 +10,7 @@ int main()
 {
 
 	Puzzle answer("hello");
+	Fuse time(5);
 	
 cout << "   _____*\n";
 cout << "  /\n";
@@ -17,7 +18,7 @@ cout << ",+,\n";
 cout << "| |\n";
 cout << "|_|\n\n";
 
-	answer.to_string();
+
 
 
 return 0;

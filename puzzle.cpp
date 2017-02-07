@@ -7,10 +7,7 @@ using namespace std;
 bool guesses[255];
 string solution;
 
-Puzzle::Puzzle(string s)
-{
-	solution = s;
-}
+
 
 
 

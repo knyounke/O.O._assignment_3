@@ -4,12 +4,13 @@
 
 int t;
 
-Fuse(int t);
+Fuse::Fuse(int t)
+{
+	t = time;
+};
 
 bool burn()
 {
-
-	t -= t;
 
 	if(t != 0)
 	{
@@ -24,9 +25,18 @@ bool burn()
 
 string to_string()
 {
+	string fuse;
+	string light = "*\n";
+	string bomb = " /\n,+,\n| |\n|_|\n\n";
+	for(int i; i < t; i++)
+	{
+		fuse.append("_");
 
+	}
+	fuse.append(light);
+	fuse.append(bomb);
 
-	return "   _____*\n  /\n,+,\n| |\n|_|\n\n";
+	return fuse;
 
 }
 
