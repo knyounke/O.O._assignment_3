@@ -8,20 +8,16 @@ bool guesses[255];
 string solution;
 
 
-Puzzle::Puzzle(string s)
-{
-	s = solution;
-};
 
 bool Puzzle::guess(char c)
-{
-	if(guesses[c] == 1)
+{	guesses[c] = 1;
+	if(solution.find(c) == string::npos)
 	{
-
+		cout << c << " is in the answer!\n";
 		return true;
 	}
 	else
-		guesses[c] = 1;
+		cout << c << " is not in the answer\n";
 		return false;
 }
 

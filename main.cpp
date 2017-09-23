@@ -14,31 +14,38 @@ int main()
 	Fuse time(5);
 	string response, proposed_solution;
 
-	cout << "=============\n  B O O M !\n=============\n";
+
+
+	while(response != "0")
+	{
+		cout << time.to_string();
+			cout << "=============\n  B O O M !\n=============\n";
 	cout << "Enter lower case letters to guess, \n" <<
 			"! to propose a solution,\n" << 
 			"0 to exit.\n";
 	cin >> response;
-
-	if(response == "0")
-	{
-		return 0;
-	}
-	else if(response != "!")
+		
+	
+	if(response == "!")
 	{
 		cout<<"Enter your proposed solution:\n";
 		cin >> proposed_solution;
 		answer.solve(proposed_solution);
 	}
-	else
+	else if(response != "0")
 	{
 		char guess;
 		cout << "Please enter your character guess: ";
 		cin >> guess;
 		answer.guess(guess);
-		time.burn();
+		if(time.burn() == 0)
+			{
+				cout <<"###### BOOM ######\nThe answer was: hello";
+			}
+		answer.to_string();
+	
 	}
-
+}
 return 0;
 }
 

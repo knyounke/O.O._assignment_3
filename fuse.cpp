@@ -2,12 +2,8 @@
 #include <string>
 #include <iostream>
 
-int t;
+int t = 5;
 
-Fuse::Fuse(int t)
-{
-	t = time;
-};
 
 bool Fuse::burn()
 {
@@ -19,7 +15,6 @@ bool Fuse::burn()
 	}
 	else
 	{
-
 		return false;
 	}
 
@@ -27,7 +22,7 @@ bool Fuse::burn()
 
 string Fuse::to_string()
 {
-	string fuse;
+	string fuse = "";
 	string light = "*\n";
 	string bomb = " /\n,+,\n| |\n|_|\n\n";
 	for(int i; i < t; i++)

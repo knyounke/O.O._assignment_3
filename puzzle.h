@@ -9,7 +9,7 @@ class Puzzle
 		std::string solution;
 		bool guesses[255];
 	public:
-		Puzzle(string solution);
+		Puzzle(string _solution) : solution(_solution) {}
 		bool guess(char c);
 		std::string solve(std::string proposed_solution);
 		std::string to_string();
